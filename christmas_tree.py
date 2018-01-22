@@ -12,5 +12,4 @@ def christmas_tree(l):
         for m in range(int(l / 2) + 1):
             print(" " * (l-1) + "*")
 
-
 christmas_tree(4)
