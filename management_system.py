@@ -1,3 +1,5 @@
+import pprint
+
 data = {}
 
 read_csv = open("data.csv", "r")
@@ -17,7 +19,7 @@ for line in read_csv.readlines():
     person["gender"] = words[3]
     person["position"] = words[4]
 
-print(data)
+pprint.pprint(data)
 
 read_csv.close()
 
@@ -25,7 +27,14 @@ write_csv = open("data.csv", "a")
 
 #write_csv.write("alias,name,age,gender,position\n")
 
-for i in range(3):
+count = -1
+
+while count < 0:
+    count = int(input("please input the count: "))
+    if count < 0:
+        print("!!WARNNING!!please input a value > 0!!!")
+
+for i in range(count):
     alias = input("please input alias: ")
 
     data[alias] = {}
@@ -40,11 +49,11 @@ for i in range(3):
     Lewei['gender'] = gender
     Lewei['position'] = position
 
-    print(Lewei)
+    pprint.pprint(Lewei)
 
     write_csv.write(",".join([alias, name, age, gender, position]) + "\n")
     write_csv.flush()
 
-print(data)
+pprint.pprint(data)
 
 write_csv.close()
