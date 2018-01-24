@@ -77,7 +77,7 @@ while i in range(4):
     while i != 1 and i != 2 and i != 3 and i != 0:
         if i != 1 and i != 2 and i != 3 and i != 0:
             print("[!!WARNING!!] please input the right order!")
-            input("please enter again: ")
+            i = int(input("please enter again: "))
     if i == 1:
         new_file_name()
 
@@ -94,6 +94,7 @@ while i in range(4):
             if j != "YES" and j != "NO":
                 print("[!!WARNING!!] please input the right option!")
                 print("YES / NO")
+                j = input()
         if j == "YES":
             read_file_data()
         else:
