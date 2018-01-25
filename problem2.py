@@ -2,11 +2,9 @@
 
 
 def calculate_digit_sum(num):
-    num_len = len(str(num))
     sum_digit = 0
     if num < 10:
-        sum_digit = num
-        print("the digit sum is : " + str(sum_digit))
+        print("the digit sum is : " + str(num))
     else:
         while num >= 10:
             temp1 = 0
@@ -17,8 +15,10 @@ def calculate_digit_sum(num):
 
             num = sum_digit
 
-        print("the digit sum is : " + str(sum_digit))
+        print("the digit sum is : " + str(num))
 
+
+# ----main---- #
 print("please input a number: ")
 num1 = input()
 
