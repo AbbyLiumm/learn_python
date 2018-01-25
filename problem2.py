@@ -19,6 +19,7 @@ def calculate_digit_sum(num):
                     num = int(num/10)
 
                 num = sum_digit
+                sum_digit = 0
 
             print("the digit sum is : " + str(num))
 
